@@ -4,7 +4,10 @@
 <meta charset="UTF-8">
 <title>Production Journal</title>
 
+<!-- REQUIRED: jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Turn.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
 
 <style>
@@ -22,10 +25,6 @@ body {
 
 .page {
   background: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
 }
 
 .page img {
@@ -46,10 +45,12 @@ body {
 </div>
 
 <script>
-$("#book").turn({
-  width: 800,
-  height: 500,
-  autoCenter: true
+$(document).ready(function() {
+  $("#book").turn({
+    width: 800,
+    height: 500,
+    autoCenter: true
+  });
 });
 </script>
 
