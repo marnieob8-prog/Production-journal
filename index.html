@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Production Journal</title>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
+
+<style>
+body {
+  background: #111;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+#book {
+  width: 800px;
+  height: 500px;
+}
+
+.page {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.page img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+</style>
+</head>
+
+<body>
+
+<div id="book">
+  <div class="page"><img src="photo1.jpg"></div>
+  <div class="page"><img src="photo2.jpg"></div>
+  <div class="page"><img src="photo3.jpg"></div>
+  <div class="page"><img src="photo4.jpg"></div>
+</div>
+
+<script>
+$("#book").turn({
+  width: 800,
+  height: 500,
+  autoCenter: true
+});
+</script>
+
+</body>
+</html>
